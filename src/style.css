@@ -1,1 +1,98 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color: #008000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+#table {
+  width: 600px;
+  height: 400px;
+  background-color: #006400;
+  border: 16px solid #8b4513;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px #000;
+}
+
+#cardContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 80px;
+  height: 120px;
+  border: 3px solid #000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  margin: 0 5px;
+  background-color: white;
+  position: absolute;
+  transform: translateX(-50%) translateY(100px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  font-family: "Press Start 2P", cursive;
+}
+
+.spade,
+.club {
+  color: black;
+}
+
+.heart,
+.diamond {
+  color: red;
+}
+
+.card::before,
+.card::after {
+  content: attr(data-rank) " " attr(data-suit);
+  position: absolute;
+  font-size: 16px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.card::before {
+  top: 5px;
+  left: 5px;
+}
+
+.card::after {
+  bottom: 5px;
+  right: 5px;
+}
+
+button {
+  font-family: "Press Start 2P", cursive;
+  border: none;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: #000;
+  box-shadow: 4px 4px 0 #000;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #000;
+}
