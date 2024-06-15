@@ -53,7 +53,7 @@ function generateRandomCard() {
   });
 
   cardIndex++;
-  if (cardIndex >= 10) {
+  if (cardIndex >= 13) {
     cardIndex = 0;
     cardContainer.innerHTML = "";
   }
